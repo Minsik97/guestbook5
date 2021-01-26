@@ -45,8 +45,9 @@ public class GuestbookDao {
 		
 		System.out.println(gbMap.toString());
 		
-		return sqlSession.delete("guestbook.delete", gbMap);
+		int count =  sqlSession.delete("guestbook.delete", gbMap);
 		
+		return count;
 	}
 	
 }
